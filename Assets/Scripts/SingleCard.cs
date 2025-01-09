@@ -14,7 +14,7 @@ public class SingleCard : MonoBehaviour
     public Sprite[] Numbers;
     public Sprite[] Aces;
 
-    public SpriteRenderer back;
+   // public SpriteRenderer back;
     public SpriteRenderer symbol;
     public SpriteRenderer number;
     public SpriteRenderer ace;
@@ -24,6 +24,7 @@ public class SingleCard : MonoBehaviour
 
     public void Start()
     {
+        /*
         if (CardValues.FacingUp)
         {
             back.sortingOrder = 3;
@@ -31,7 +32,7 @@ public class SingleCard : MonoBehaviour
         else
         {
             back.sortingOrder = 0;
-        }
+        }*/
         string val = "ace";
 
         if (CardValues.cardSuit == CardSuit.clubs)

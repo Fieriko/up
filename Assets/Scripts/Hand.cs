@@ -30,7 +30,7 @@ public class Hand : MonoBehaviour
             placeOffset = placeOffset + .5f;
             placeSet = 0;
         }
-            GameObject card = Instantiate(GivenCard, new Vector3(Place[placeSet].position.x, Place[placeSet].position.y + placeOffset, Place[placeSet].position.z), Quaternion.identity, Place[placeSet]);
+            GameObject card = Instantiate(GivenCard, new Vector3(Place[placeSet].position.x, Place[placeSet].position.y + placeOffset, Place[placeSet].position.z+placeOffset), Place[placeSet].rotation, Place[placeSet]);
             placeSet++;
 
             int selected = Random.Range(1,deck.Cards.Count);
