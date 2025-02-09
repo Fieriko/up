@@ -20,7 +20,10 @@ public class CardSelect : MonoBehaviour
     }
     void Update()
     {
-        CardHold.position = mousePos;
+        Vector3 a= Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+        a.Set(a.x, a.y, CardHold.position.z);
+        //CardHold.position = Vector3.Lerp(CardHold.position, a, 0.01f);
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             ray = Camera.main.ScreenPointToRay(mousePos);
